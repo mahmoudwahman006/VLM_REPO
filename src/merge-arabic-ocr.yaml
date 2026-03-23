@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: google/gemma-3-4b-it
+adapter_name_or_path: /workspace/ocr-models-gemma-3-4b-it/checkpoint-1640/
+template: gemma3
+trust_remote_code: true
+
+### export
+export_dir: /workspace/saves/arabic-legal-documents-ocr-1.0-fp32
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
